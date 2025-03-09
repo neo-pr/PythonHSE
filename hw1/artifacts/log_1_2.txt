@@ -1,0 +1,54 @@
+PS > uv run 1_2_tail.py data/missing_files.txt
+2202.ttf
+2203.ttf
+2254.ttf
+2255.ttf
+2274.ttf
+2275.ttf
+2572.ttf
+2573.ttf
+2856.ttf
+2857.ttf
+PS > uv run 1_2_tail.py data/missing_files.txt data/missing_pairs.txt
+==> data/missing_files.txt <==
+2202.ttf
+2203.ttf
+2254.ttf
+2255.ttf
+2274.ttf
+2275.ttf
+2572.ttf
+2573.ttf
+2856.ttf
+2857.ttf
+
+==> data/missing_pairs.txt <==
+2801.ttf
+2869.ttf
+2879.ttf
+2881.ttf
+2883.ttf
+2939.ttf
+2951.ttf
+2985.ttf
+2995.ttf
+3011.ttf
+PS > cat data/missing_files.txt | uv run 1_2_tail.py -
+1537.ttf
+1722.ttf
+1723.ttf
+1836.ttf
+1837.ttf
+1970.ttf
+1971.ttf
+2202.ttf
+2203.ttf
+2254.ttf
+2255.ttf
+2274.ttf
+2275.ttf
+2572.ttf
+2573.ttf
+2856.ttf
+2857.ttf
+PS > 

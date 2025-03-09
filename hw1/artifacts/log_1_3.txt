@@ -1,0 +1,18 @@
+PS > uv run 1_3_wc.py data/missing_files.txt
+ 32  32 288 data/missing_files.txt
+PS > uv run 1_3_wc.py data/missing_files.txt data/missing_pairs.txt data/tale.txt
+   32    32   288 data/missing_files.txt
+  240   240  2160 data/missing_pairs.txt
+   65  1463 16348 data/tale.txt
+  337  1735 18796 total
+PS > Get-ChildItem -Name | uv run 1_3_wc.py -
+     12      12     143
+PS > Get-ChildItem -Name | uv run 1_3_wc.py - -
+ 12  12 143 -
+  0   0   0 -
+ 12  12 143 total
+PS > Get-ChildItem -Name | uv run 1_3_wc.py data/tale.txt -
+   65  1463 16348 data/tale.txt
+   12    12   143 -
+   77  1475 16491 total
+PS > 

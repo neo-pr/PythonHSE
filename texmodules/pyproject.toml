@@ -1,7 +1,0 @@
-[project]
-name = "texmodules"
-version = "0.1.0"
-description = "Create tex codes for tables and images from text and png files"
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []

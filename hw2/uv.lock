@@ -29,7 +29,20 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "click" },
+    { name = "texesm" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "click", specifier = ">=8.1.8" }]
+requires-dist = [
+    { name = "click", specifier = ">=8.1.8" },
+    { name = "texesm", specifier = ">=0.1.0" },
+]
+
+[[package]]
+name = "texesm"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/70/2e/48e4d7381026593232198be0bf0138ebbb8b2815b16933d1312bd55f95d5/texesm-0.1.0.tar.gz", hash = "sha256:c69690d6c8070caef9596270f01fb0e06a2b039b63cd8020e79e6cd26f44a4df", size = 1857 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c4/f3/85144df0c0bde694fffeb7f9aeb97f32840e507e8a4ce8faf43a8cd13330/texesm-0.1.0-py3-none-any.whl", hash = "sha256:a1ef9195a1f685034d0301e1c1b336d431e91ce2a2736b7ce19486ba6643ed4a", size = 2561 },
+]

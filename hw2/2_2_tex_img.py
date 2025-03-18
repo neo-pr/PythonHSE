@@ -1,6 +1,6 @@
 import pathlib
 import click
-from texmodules import get_tex_image
+from texesm.texmodules import get_tex_image
 
 
 @click.command()

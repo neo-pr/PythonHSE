@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.17)  18 MAR 2025 02:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.17)  18 MAR 2025 06:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\documentclass{article}
 
-*\usepackage[subpreambles=true]{standalone}
+*    \usepackage[subpreambles=true]{standalone}
 (C:\Users\rethn\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (C:\Users\rethn\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
@@ -22,7 +22,7 @@ File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
 )
-*\usepackage{import}
+*    \usepackage{import}
 
 (C:\Users\rethn\AppData\Local\Programs\MiKTeX\tex/latex/standalone\standalone.s
 ty
@@ -251,7 +251,7 @@ Here is how much of TeX's memory you used:
  26635 multiletter control sequences out of 15000+600000
  558837 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 124i,6n,121p,309b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 124i,6n,121p,313b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rethn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 r10.pfb>
 Output written on C:\Users\rethn\OneDrive\Documents\PosMachineLearning\PythonDe

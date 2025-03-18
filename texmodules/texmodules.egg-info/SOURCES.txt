@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+texmodules.egg-info/PKG-INFO
+texmodules.egg-info/SOURCES.txt
+texmodules.egg-info/dependency_links.txt
+texmodules.egg-info/top_level.txt

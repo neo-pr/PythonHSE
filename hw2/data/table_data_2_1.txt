@@ -1,0 +1,4 @@
+ColumnA ColumnB ColumnC
+Yes 1.2 200
+No 2.1 100
+Yes 0.2 220

@@ -1,0 +1,8 @@
+\standalonepreambles
+\subpreamble{./2_1_table.tex}
+
+\endsubpreamble
+\subpreamble{./2_2_img.tex}
+\usepackage {graphicx}\graphicspath { {../data/} }
+\endsubpreamble
+\endstandalonepreambles

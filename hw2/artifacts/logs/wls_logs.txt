@@ -1,0 +1,38 @@
+$ ls artifacts
+2_1_table.tex  2_2_img.tex
+$ docker compose up
+[+] Building 83.1s (20/20) FINISHED                                                                                                                      docker:default
+ => [pdflatex internal] load build definition from Dockerfile                                                                                                      4.7s
+ => => transferring dockerfile: 1.11kB                                                                                                                             1.3s
+ => [pdflatex internal] load metadata for docker.io/library/python:3.13.2-alpine                                                                                  16.9s
+ => [pdflatex internal] load .dockerignore                                                                                                                         3.5s
+ => => transferring context: 2B                                                                                                                                    0.2s
+ => [pdflatex  1/14] FROM docker.io/library/python:3.13.2-alpine@sha256:323a717dc4a010fee21e3f1aac738ee10bb485de4e7593ce242b36ee48d6b352                           0.0s
+ => [pdflatex internal] load build context                                                                                                                         2.9s
+ => => transferring context: 7.10kB                                                                                                                                0.5s
+ => CACHED [pdflatex  2/14] WORKDIR /code                                                                                                                          0.0s
+ => CACHED [pdflatex  3/14] RUN apk add -U make                                                                                                                    0.0s
+ => CACHED [pdflatex  4/14] RUN apk add -U --repository http://dl-3.alpinelinux.org/alpine/edge/main     poppler harfbuzz-icu                                      0.0s
+ => CACHED [pdflatex  5/14] RUN apk add -U --repository http://dl-3.alpinelinux.org/alpine/edge/community     zziplib                                              0.0s
+ => CACHED [pdflatex  6/14] RUN apk add -U --repository http://dl-3.alpinelinux.org/alpine/edge/testing     texlive-full                                           0.0s
+ => CACHED [pdflatex  7/14] RUN ln -s /usr/bin/mktexlsr /usr/bin/mktexlsr.pl                                                                                       0.0s
+ => CACHED [pdflatex  8/14] COPY requirements.txt requirements.txt                                                                                                 0.0s
+ => CACHED [pdflatex  9/14] RUN pip install -r requirements.txt                                                                                                    0.0s
+ => CACHED [pdflatex 10/14] COPY ./2*.py .                                                                                                                         0.0s
+ => CACHED [pdflatex 11/14] COPY artifacts/2_1_table.tex artifacts/2_1_table.tex                                                                                   0.0s
+ => CACHED [pdflatex 12/14] COPY artifacts/2_2_img.tex artifacts/2_2_img.tex                                                                                       0.0s
+ => [pdflatex 13/14] COPY data data                                                                                                                               13.1s
+ => [pdflatex 14/14] WORKDIR artifacts                                                                                                                            10.9s
+ => [pdflatex] exporting to image                                                                                                                                 11.4s
+ => => exporting layers                                                                                                                                            8.6s
+ => => writing image sha256:aa34ffad662277a7aa0bb6b17bfa01044199e725bb2b8877dcdf63329576aa71                                                                       0.2s
+ => => naming to docker.io/library/testdphw2-pdflatex                                                                                                              0.5s
+ => [pdflatex] resolving provenance for metadata file                                                                                                              0.4s
+[+] Running 1/1
+ ✔ Container testdphw2-pdflatex-1  Created                                                                                                                        10.3s
+Attaching to pdflatex-1
+pdflatex-1 exited with code 0
+$ ls artifacts
+2_1_table.tex  2_2_img.tex  2_2_main.aux  2_2_main.log  2_2_main.pdf  2_2_main.sta  2_2_main.tex
+$ du -hs 2_2_main.pdf
+24K     2_2_main.pdf

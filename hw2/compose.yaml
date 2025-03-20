@@ -1,0 +1,9 @@
+services:
+  pdflatex:
+    build: .
+    volumes:
+      - type: bind
+        source: ./artifacts
+        target: /code/artifacts
+volumes:
+  artifacts:

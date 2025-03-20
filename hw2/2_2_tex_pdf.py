@@ -7,7 +7,8 @@ from subprocess import STDOUT
 
 @click.command()
 @click.argument("filename", type=click.Path(exists=True, dir_okay=False), nargs=2)
-def cli(filename):
+@click.option("--main_tex_path", default="./artifacts", help= "relative path to save the main tex code")
+def cli(filename, main_tex_path):
     """
     Task 2.2
     A function that combines two tex FILENAMEs: a table and an image,
@@ -28,7 +29,8 @@ def cli(filename):
     footer = "\\end{document}"
     res_main_tex = "\n".join([header, body, footer])
 
-    main_tex_file = pathlib.Path("artifacts/2_2_main.tex")
+    # to place main tex file in the same folder as the others
+    main_tex_file = pathlib.Path(main_tex_path).joinpath("2_2_main.tex")
 
     with open(main_tex_file, "w") as f:
         f.write(res_main_tex)
@@ -40,7 +42,7 @@ def cli(filename):
             args = [
                 "pdflatex",
                 "-output-directory",
-                "artifacts",
+                main_tex_path,
                 "-job-name",
                 "2_2_main",
             ]

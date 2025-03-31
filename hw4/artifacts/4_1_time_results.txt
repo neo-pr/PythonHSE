@@ -1,0 +1,6 @@
+PS > uv run 4_1_thread.py
+Test function: finding the 10000th element in Fibonacci sequence.
+Time for 10 threads for test function: 0.1221 secs
+PS > uv run 4_1_process.py
+Test function: finding the 10000th element in Fibonacci sequence.
+Time for 10 processes for test function: 2.2362 secs

@@ -34,17 +34,17 @@ def assert_same_mtx_size(a, b):
         f"Sizes of matrices should be equal, but got {a} (left) and {b} (right)."
     )
 
-def save_cache_mul(hash_a, hash_b, result):
 
+def save_cache_mul(hash_a, hash_b, result):
     if not CACHE_DIR.exists():
         CACHE_DIR.mkdir()
-    
+
     # openinig/creating file
     with open(CACHE_DIR.joinpath(f"{hash_a}.pickle"), "ab") as f:
         pickle.dump((hash_b, result), f)
 
-def read_cache_mul(hash_a, hash_b):
 
+def read_cache_mul(hash_a, hash_b):
     if not CACHE_DIR.exists():
         return None
 
@@ -62,7 +62,6 @@ def read_cache_mul(hash_a, hash_b):
 
 
 class Matrihs:
-
     def __eq__(self, other):
         # first check shape
         if self.size == other.size:
@@ -79,11 +78,11 @@ class Matrihs:
     def __hash__(self):
         """
         The hash is buil based on:
-        1- the flattened array (tuple) 
-        and (+) 
+        1- the flattened array (tuple)
+        and (+)
         2- its size (tuple)
         """
-        
+
         return hash(tuple(n for line in self.content for n in line) + self.size)
 
 
@@ -133,10 +132,10 @@ class Matrib:
         # if use_cache and (res := read_cache_mul(hash(self), hash(nova_matriz))):
         if self.use_cache:
             hash_a, hash_b = hash(self), hash(nova_matriz)
-            if (res := read_cache_mul(hash_a, hash_b)):
-                print("returned from cached")   # temp DELETE this line
+            if res := read_cache_mul(hash_a, hash_b):
+                print("returned from cached")  # temp DELETE this line
                 return res
-        
+
         result = []
         # check compatibility
         assert self.columns == nova_matriz.lines, (
@@ -181,8 +180,10 @@ class Matrib:
         result += f"└ {' ' * space_bound} ┘"
         return result
 
+
 class Matriz(Matrib, Matrihs):
     pass
+
 
 def main():
     np.random.seed(0)
@@ -198,16 +199,16 @@ def main():
     # getting real cd
     c.use_cache = False
     cd = c @ d
-    
+
     # asserting conditions
     assert (hash(a) == hash(c)) and (a != c) and (b == d) and (ab != cd)
 
     # saving matrices files
-    for obj, fname in zip([a, b, c, d, ab, cd], ['A', 'B', 'C', 'D', 'AB', 'CD']):
+    for obj, fname in zip([a, b, c, d, ab, cd], ["A", "B", "C", "D", "AB", "CD"]):
         file = pathlib.Path(f"artifacts/{fname}.txt")
         with open(file, "w", encoding="utf-8") as f:
             f.write(str(obj))
-    
+
     # saving hash file
     with open(pathlib.Path("artifacts/hash.txt"), "w", encoding="utf-8") as f:
         f.write(f"hash matrix AB:   {hash(ab)}\n")

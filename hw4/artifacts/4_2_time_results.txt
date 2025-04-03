@@ -1,0 +1,22 @@
+PS > uv run 4_2_thread.py
+max workers: 1, time: 2.550 secs, result: 1.0000000785399288
+max workers: 2, time: 2.434 secs, result: 1.0000000785398064
+max workers: 3, time: 2.165 secs, result: 1.0000000785397951
+max workers: 4, time: 2.151 secs, result: 1.000000078539799
+max workers: 5, time: 2.184 secs, result: 1.000000078539829
+max workers: 6, time: 2.159 secs, result: 1.0000000785398302
+max workers: 7, time: 2.184 secs, result: 1.000000078539817
+max workers: 8, time: 2.162 secs, result: 1.0000000785398042
+
+Total time: 17.991 secs
+PS > uv run 4_2_process.py
+max workers: 1, time: 2.980 secs, result: 1.0000000785399288
+max workers: 2, time: 1.832 secs, result: 1.0000000785398064
+max workers: 3, time: 1.760 secs, result: 1.0000000785397951
+max workers: 4, time: 1.744 secs, result: 1.000000078539799
+max workers: 5, time: 2.068 secs, result: 1.000000078539829
+max workers: 6, time: 1.929 secs, result: 1.0000000785398302
+max workers: 7, time: 2.088 secs, result: 1.000000078539817
+max workers: 8, time: 2.203 secs, result: 1.0000000785398042
+
+Total time: 16.609 secs

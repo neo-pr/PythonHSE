@@ -5,7 +5,7 @@ import codecs
 
 def process_a(queue_a, queue_b):
     for msg in iter(queue_a.get, "exit"):
-        time.sleep(1)
+        time.sleep(5)
         queue_b.put(msg.lower())
 
 
@@ -30,16 +30,10 @@ def main():
         process.start()
 
     # main process
-    # while True:
-    #     msg = input('] ')
-    #     if msg == 'exit':
-    #         break
-    #     queue_a.put(msg)
-
-    # main process
     while (msg := input("] ")) != "exit":
         queue_a.put(msg)
 
+    # stopping child processes (msg = 'exit')
     queue_a.put(msg)
     queue_b.put(msg)
 

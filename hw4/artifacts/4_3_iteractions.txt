@@ -1,0 +1,18 @@
+PS > uv run 4_3_coord_process.py
+] a
+] sa
+] 
+n
+]
+fn
+] sa
+] 
+fn
+] sasasa
+] 
+fnfnfn
+] SASASA
+] 
+fnfnfn
+] exit
+PS > 

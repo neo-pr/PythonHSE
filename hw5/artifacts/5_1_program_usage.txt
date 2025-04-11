@@ -1,0 +1,7 @@
+PS > uv run 5_1_nb_downloads.py 5 data
+Saving file img0000.jpg to data
+Saving file img0004.jpg to data
+Saving file img0001.jpg to data
+Saving file img0002.jpg to data
+Saving file img0003.jpg to data
+Executed <function main at 0x000002921A943740> in 2.907 seconds
